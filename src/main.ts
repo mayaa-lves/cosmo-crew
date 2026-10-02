@@ -1,6 +1,8 @@
 import './style.css'
 import Phaser from 'phaser'
-import { BootScene } from './game/scenes/BootScene'
+import { GameScene } from './game/scenes/GameScene'
+import { MenuScene } from './game/scenes/MenuScene'
+import { LobbyScene } from './game/scenes/LobbyScene'
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
@@ -20,7 +22,7 @@ const config: Phaser.Types.Core.GameConfig = {
     },
   },
 
-  scene: [BootScene],
+  scene: [MenuScene, LobbyScene, GameScene],
 
   scale: {
     mode: Phaser.Scale.RESIZE,
